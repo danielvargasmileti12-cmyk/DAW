@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="form.php" method="post">
+        <!--El hidden significa que lo que enviemos sepa de que idioma es , es decir si es espanol o el idioma que sea y para enviar de 
+            forma oculta
+            el type checkbox como dice la palabra es una caja para seleccionar o no .
+        -->
+
+
+        <input type="nombre" name="nombreusuario" placeholder="Tu Nombre">
+        <input type="apellido" name="apellidousuario" placeholder="Apellidos">
+        <br>
+
+        <input type="email" name="emailusuario" placeholder="Correo Electronico" required>
+        <input type="text" name="numbertelefono" placeholder="Numero de Telefono">
+
+        <input type="hidden" name="idioma">
+
+        <br>
+
+        <p>Gustos Musicales:
+
+            <label for="">Jazz:
+                <input type="checkbox" name="jazz" value="1">
+
+            </label>
+            <label for="">Pop:
+                <input type="checkbox" name="pop" value="1">
+            </label>
+            <label for="">Tecno:
+                <input type="checkbox" name="Tecno" value="1">
+            </label>
+        </p>
+
+        <div>
+            <h3>Eres mayor de edad:</h3>
+            <label for="Si">Si</label>
+            <input type="radio" name="mayor" value="Si" id="si">
+            <br>
+            <label for="no">No</label>
+            <input type="radio" name="mayor" value="No" id="no">
+            <label for="no lo se">No lo se</label>
+            <input type="radio" name="mayor" value="no lo se" id="no lo se">
+        </div>
+
+        <hr>
+
+        <div>
+
+            <label for="provincia">Seleccione provincia</label>
+
+            <select name="ciudad" id="">
+                <option aria-readonly="false" disabled selected required>Selecciona una ciudad</option>
+                <option value="Granada">Granada</option>
+                <option value="Malaga">Malaga</option>
+                <option value="Cadiz">Cadiz</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Cordoba">Cordoba</option>
+            </select>
+
+
+        </div>
+        
+        
+        
+        <input type="reset" name="restablecer">
+        <input type="submit" name="enviar">
+    </form>
+</body>
+
+</html>
