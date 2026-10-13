@@ -17,227 +17,229 @@
     </STYLE>
 </head>
 <body>
-      <form action=""></form>   
-   
-    <table width="80%" border="1">
-        
-        <tr>
-            <td colspan="2">RESERVA AGENCIA VIAJES:</td>
-        </tr>
-        <tr>
-            <td>DESTINO*</td>
-            <td> <select name="ciudad" id="">
-                
-                <option aria-readonly="false" disabled selected required>Selecciona una ciudad</option>  
-                <option value="A Coruña">A Coruña</option>
-                <option value="Albacete">Albacete</option>
-                <option value="Alicante">Alicante</option>
-                <option value="Almería">Almería</option>
-                <option value="Álava">Álava</option>
-                <option value="Asturias">Asturias</option>
-                <option value="Ávila">Ávila</option>
-                <option value="Badajoz">Badajoz</option>
-                <option value="Barcelona">Barcelona</option>
-                <option value="Bizkaia">Bizkaia</option>
-                <option value="Burgos">Burgos</option>
-                <option value="Cáceres">Cáceres</option>
-                <option value="Cádiz">Cádiz</option>
-                <option value="Cantabria">Cantabria</option>
-                <option value="Castellón">Castellón</option>
-                <option value="Ciudad Real">Ciudad Real</option>
-                <option value="Córdoba">Córdoba</option>
-                <option value="Cuenca">Cuenca</option>
-                <option value="Girona">Girona</option>
-                <option value="Granada">Granada</option>
-                <option value="Guadalajara">Guadalajara</option>
-                <option value="Guipúzcoa">Guipúzcoa</option>
-                <option value="Huelva">Huelva</option>
-                <option value="Huesca">Huesca</option>
-                <option value="Illes Balears">Illes Balears</option>
-                <option value="Jaén">Jaén</option>
-                <option value="La Rioja">La Rioja</option>
-                <option value="Las Palmas">Las Palmas</option>
-                <option value="León">León</option>
-                <option value="Lleida">Lleida</option>
-                <option value="Lugo">Lugo</option>
-                <option value="Madrid">Madrid</option>
-                <option value="Málaga">Málaga</option>
-                <option value="Murcia">Murcia</option>
-                <option value="Navarra">Navarra</option>
-                <option value="Ourense">Ourense</option>
-                <option value="Palencia">Palencia</option>
-                <option value="Pontevedra">Pontevedra</option>
-                <option value="Salamanca">Salamanca</option>
-                <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
-                <option value="Segovia">Segovia</option>
-                <option value="Sevilla">Sevilla</option>
-                <option value="Soria">Soria</option>
-                <option value="Tarragona">Tarragona</option>
-                <option value="Teruel">Teruel</option>
-                <option value="Toledo">Toledo</option>
-                <option value="Valencia">Valencia</option>
-                <option value="Valladolid">Valladolid</option>
-                <option value="Vizcaya">Vizcaya</option>
-                <option value="Zamora">Zamora</option>
-                <option value="Zaragoza">Zaragoza</option>
-                <option value="Ceuta">Ceuta</option>
-                <option value="Melilla">Melilla</option>
-             
-               
-            </select></td>
-        </tr>
-          <tr>
-            <td>
-                FECHA DE SALIDA
-            </td>
-            <td>
-              <input type="date" name="calendario">  <br>
-              <input type="checkbox" name="checkbox"> Soy flexible con la fecha 
-            </td>
-          </tr>
-          <tr>
-              <td>
-                NUMERO DE ADULTOS*
-            </td>
-            <td>
-                <select name="adultos">
-                    <option aria-readonly="false" disabled selected required>Seleccionar adultos</option> 
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                     <option value="3">3</option>
-                      <option value="4">4</option>
-                       <option value="5">5</option>
-                        <option value="6">6</option>
-                         <option value="7">7</option>
-                          <option value="8">8</option>
-                           <option value="9">9</option>
-                            <option value="10">10</option>
-                </select> <br>
-                <input type="checkbox" name="checkbox"> Viajamos con niños 
-            </td>
-          </tr>
-          <tr>
-            <td>
-                EDAD ADULTOS
-            </td>
-            <td>
-                <label for="edad1">18-30</label>
-                <input type="radio" name="mayor" value="18-30" id="edad1">
-                <label for="edad2">31-50</label>
-                <input type="radio" name="mayor" value="31-50" id="edad2">
-                <label for="edad3">50+</label>
-                <input type="radio" name="mayor" value="50+" id="edad3">
-            
-            </td>
-          </tr>
-          <tr>
-            <td>
-                TIPO DE VIAJE
-            </td>
-            <td>
-                <input type="checkbox"> Viaje programado
-            </td>
-          </tr>
-          <tr>
-            <td>
-                ACTIVIDADES
-            </td>
-            <td>
-                <input type="checkbox" name="cruceros"> Cruceros en galapagos <br>
-                <input type="checkbox" name="tour hotel"> Tours combinados , hotel-yate <br>
-                <input type="checkbox" name="tour empaquetado"> Tours empaquetados <br>
-            </td>
-          </tr>
-          <tr>
-           <td>
-            TIPO DE ACOMODACION*
-           </td>
-            <td>
-               <label for="estrellas1">5 estrellas</label>
-                <input type="radio" name="menor" value="estrellas" id="estrellas1">
+      <form action="form.php" method="post">
 
-                <label for="estrellas2">4 estrellas</label>
-                <input type="radio" name="menor" value="4 estrellas" id="estrellas2"> 
-                
-                <label for="estrellas3">3 estrellas</label>
-                <input type="radio" name="menor" value="3 estrellas" id="estrellas3"> 
-            </td>
-          </tr>
-          <tr>
-            <td>
-                OTROS SERVICIOS
-            </td>
-            <td>
-                <input type="checkbox" name="actividades , guias , informacion">Actividades,guias,informacion <br>
-                <input type="checkbox" name="transporte">transporte
-            </td>
-          </tr>
-          <tr>
-            <td>
-                ¿CUAL ES EL VIAJE QUE QUISIERAS?
-            </td>
-            <td>
-                <textarea name="mensaje" name="mensaje" rows="5" cols="30">
-                </textarea>
-            </td>
-          </tr>
-          <tr>
-            <td>
-                NOMBRE Y APELLIDO*
-            </td>
-            <td>
-                <input type="text" name="nombre y apellido" placeholder="Nombre y Apellido">
-            </td>
-          </tr>
-          <tr>
-            <td>
-                EMAIL*
-            </td>
-            <td>
-                <input type="text" name="email" placeholder="Email" required>
-            </td>
-          </tr>
-          <tr>
-            <td>
-                TELEFONO*
-            </td>
-            <td>
-                <input type="text" name="telefono" placeholder="Telefono">
-            </td>
-          </tr>
-          <tr>
-            <td>
-                CIUDAD
-            </td>
-            <td>
-                <input type="text" name="ciudad" placeholder="ciudad">
-            </td>
-          </tr>
-          <tr>
-            <td>
-                PAIS DE RESIDENCIA
-            </td>
-            <td>
-                <input type="text" name="pais residencia" placeholder="Pais de residencia">
-            </td>
-          </tr>
-          <tr>
-            <td>
-                Estoy de acuerdo con los terminos de uso y politicas de privacidad*
-            </td>
-            <td> <br>
-                <input type="checkbox" name="politica de privacidad"> Estoy de acuerdo
-            </td>
-          </tr>
-          <tr>
-            <td>
-                
-            </td>
-            <td>
-                <input type="submit" name="enviar">
-                <input type="reset" name="restablecer">
-            </td>
-          </tr>
-    </table>
-</body>
-</html>
+          
+          <table width="80%" border="1">
+              
+              <tr>
+                  <td colspan="2">RESERVA AGENCIA VIAJES:</td>
+                </tr>
+                <tr>
+                    <td>DESTINO*</td>
+                    <td> <select name="ciudad" id="">
+                        
+                        <option aria-readonly="false" disabled selected required>Selecciona una ciudad</option>  
+                        <option value="A Coruña">A Coruña</option>
+                        <option value="Albacete">Albacete</option>
+                        <option value="Alicante">Alicante</option>
+                        <option value="Almería">Almería</option>
+                        <option value="Álava">Álava</option>
+                        <option value="Asturias">Asturias</option>
+                        <option value="Ávila">Ávila</option>
+                        <option value="Badajoz">Badajoz</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Bizkaia">Bizkaia</option>
+                        <option value="Burgos">Burgos</option>
+                        <option value="Cáceres">Cáceres</option>
+                        <option value="Cádiz">Cádiz</option>
+                        <option value="Cantabria">Cantabria</option>
+                        <option value="Castellón">Castellón</option>
+                        <option value="Ciudad Real">Ciudad Real</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Cuenca">Cuenca</option>
+                        <option value="Girona">Girona</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Guadalajara">Guadalajara</option>
+                        <option value="Guipúzcoa">Guipúzcoa</option>
+                        <option value="Huelva">Huelva</option>
+                        <option value="Huesca">Huesca</option>
+                        <option value="Illes Balears">Illes Balears</option>
+                        <option value="Jaén">Jaén</option>
+                        <option value="La Rioja">La Rioja</option>
+                        <option value="Las Palmas">Las Palmas</option>
+                        <option value="León">León</option>
+                        <option value="Lleida">Lleida</option>
+                        <option value="Lugo">Lugo</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Málaga">Málaga</option>
+                        <option value="Murcia">Murcia</option>
+                        <option value="Navarra">Navarra</option>
+                        <option value="Ourense">Ourense</option>
+                        <option value="Palencia">Palencia</option>
+                        <option value="Pontevedra">Pontevedra</option>
+                        <option value="Salamanca">Salamanca</option>
+                        <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+                        <option value="Segovia">Segovia</option>
+                        <option value="Sevilla">Sevilla</option>
+                        <option value="Soria">Soria</option>
+                        <option value="Tarragona">Tarragona</option>
+                        <option value="Teruel">Teruel</option>
+                        <option value="Toledo">Toledo</option>
+                        <option value="Valencia">Valencia</option>
+                        <option value="Valladolid">Valladolid</option>
+                        <option value="Vizcaya">Vizcaya</option>
+                        <option value="Zamora">Zamora</option>
+                        <option value="Zaragoza">Zaragoza</option>
+                        <option value="Ceuta">Ceuta</option>
+                        <option value="Melilla">Melilla</option>
+                        
+                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        FECHA DE SALIDA
+                    </td>
+                    <td>
+                        <input type="date" name="calendario">  <br>
+                        <input type="checkbox" name="checkbox"> Soy flexible con la fecha 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        NUMERO DE ADULTOS*
+                    </td>
+                    <td>
+                        <select name="adultos">
+                            <option aria-readonly="false" disabled selected required>Seleccionar adultos</option> 
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select> <br>
+                        <input type="checkbox" name="checkbox"> Viajamos con niños 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        EDAD ADULTOS
+                    </td>
+                    <td>
+                        <label for="edad1">18-30</label>
+                        <input type="radio" name="mayor" value="18-30" id="edad1">
+                        <label for="edad2">31-50</label>
+                        <input type="radio" name="mayor" value="31-50" id="edad2">
+                        <label for="edad3">50+</label>
+                        <input type="radio" name="mayor" value="50+" id="edad3">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        TIPO DE VIAJE
+                    </td>
+                    <td>
+                        <input type="checkbox"> Viaje programado
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ACTIVIDADES
+                    </td>
+                    <td>
+                        <input type="checkbox" name="cruceros"> Cruceros en galapagos <br>
+                        <input type="checkbox" name="tour hotel"> Tours combinados , hotel-yate <br>
+                        <input type="checkbox" name="tour empaquetado"> Tours empaquetados <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        TIPO DE ACOMODACION*
+                    </td>
+                    <td>
+                        <label for="estrellas1">5 estrellas</label>
+                        <input type="radio" name="menor" value="estrellas" id="estrellas1">
+                        
+                        <label for="estrellas2">4 estrellas</label>
+                        <input type="radio" name="menor" value="4 estrellas" id="estrellas2"> 
+                        
+                        <label for="estrellas3">3 estrellas</label>
+                        <input type="radio" name="menor" value="3 estrellas" id="estrellas3"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        OTROS SERVICIOS
+                    </td>
+                    <td>
+                        <input type="checkbox" name="actividades , guias , informacion">Actividades,guias,informacion <br>
+                        <input type="checkbox" name="transporte">transporte
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ¿CUAL ES EL VIAJE QUE QUISIERAS?
+                    </td>
+                    <td>
+                        <textarea name="mensaje" name="mensaje" rows="5" cols="30">
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        NOMBRE Y APELLIDO*
+                    </td>
+                    <td>
+                        <input type="text" name="nombre y apellido" placeholder="Nombre y Apellido">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        EMAIL*
+                    </td>
+                    <td>
+                        <input type="text" name="email" placeholder="Email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        TELEFONO*
+                    </td>
+                    <td>
+                        <input type="text" name="telefono" placeholder="Telefono">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CIUDAD
+                    </td>
+                    <td>
+                        <input type="text" name="ciudad" placeholder="ciudad">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        PAIS DE RESIDENCIA
+                    </td>
+                    <td>
+                        <input type="text" name="pais residencia" placeholder="Pais de residencia">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Estoy de acuerdo con los terminos de uso y politicas de privacidad*
+                    </td>
+                    <td> <br>
+                        <input type="checkbox" name="politica de privacidad"> Estoy de acuerdo
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <input type="submit" name="enviar">
+                        <input type="reset" name="restablecer">
+                    </td>
+                </tr>
+            </table>
+        </body>
+    </form>   
+        </html>
