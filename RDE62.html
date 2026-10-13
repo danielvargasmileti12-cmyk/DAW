@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let saldo = 1000
+        let retirarDinero = 0
+
+        while (saldo > 0) {
+             retirarDinero =  Number(prompt(" Saldo: " + saldo + " Introduzca cantidad a retirar: "))
+
+           while (retirarDinero <=0 || retirarDinero >saldo) {
+            retirarDinero = Number(prompt(" Saldo insuficiente. Saldo: " + saldo + " Introduzca cantidad a retirar: "))
+           }
+           saldo-=retirarDinero
+        }
+
+        
+        console.log("Te has quedado sin saldo a trabajar");
+
+    </script>
+</body>
+
+</html>
