@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numeroUsuario = Number(prompt("Introduzca un numero entero"))
+
+        while (numeroUsuario < 0) {
+            numeroUsuario = Number(prompt(" Error: Introduzca un numero entero"))
+        }
+
+        let multiplos = ""
+        let contador = 0
+        for (let i = 1; i <= numeroUsuario; i++) {
+            if (i % 2 === 0 && i % 3 === 0) {
+                contador++
+                multiplos += i +", "
+            }
+        }
+        console.log("Los multiplos de 2 y 3 son :" + multiplos);
+        console.log("Cantidad:" + " " + contador);
+    </script>
+</body>
+
+</html>

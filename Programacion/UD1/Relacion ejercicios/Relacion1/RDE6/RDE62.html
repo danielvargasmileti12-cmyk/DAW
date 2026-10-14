@@ -13,18 +13,17 @@
         let retirarDinero = 0
 
         while (saldo > 0) {
-             retirarDinero =  Number(prompt(" Saldo: " + saldo + " Introduzca cantidad a retirar: "))
+            retirarDinero = Number(prompt(" Saldo: " + saldo + " Introduzca cantidad a retirar: "))
 
-           while (retirarDinero <=0 || retirarDinero >saldo) {
-            retirarDinero = Number(prompt(" Saldo insuficiente. Saldo: " + saldo + " Introduzca cantidad a retirar: "))
-           }
-           saldo-=retirarDinero
+            while (retirarDinero <= 0 || retirarDinero > saldo) {
+                retirarDinero = Number(prompt(" Saldo insuficiente. Saldo: " + saldo + " Introduzca cantidad a retirar: "))
+            }
+            saldo -= retirarDinero
         }
 
-        
         console.log("Te has quedado sin saldo a trabajar");
-
     </script>
 </body>
 
 </html>
+        

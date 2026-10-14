@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Solicitar un numero entero positivo. 
+        Mostrar el numero con sus digitos en orden inverso, sin convertirlo a texto.*/
+
+
+        let numeroUsuario = Number(prompt("Introduzca un numero entero"))
+        let invertido = "";
+
+        while (numeroUsuario < 0) {
+            Number(prompt("Error: Introduzca un numero entero"))
+        }
+
+        for (; numeroUsuario > 0; numeroUsuario = parseInt(numeroUsuario / 10)) {
+            let ultimaCifra = numeroUsuario % 10;
+            invertido = invertido * 10 + ultimaCifra;
+        }
+        console.log("Si el numero vale" + " " + numeroUsuario + " " + ":" + invertido);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones Alumnos</title>
+</head>
+<body>
+    <script>
+        const numeroReinicio = -1
+        let totalAlumnos = 0
+        let contadorAlumnos = 0
+        let aprobados = 0
+        let totalNotas = 0
+        let suspendidos = 0
+
+
+        let nota = Number(prompt("Introduzca aqui la nota del alumno" + " " + (contadorAlumnos + 1) + ":"))
+         while (nota != numeroReinicio) {
+            contadorAlumnos++;
+            
+            totalNotas += nota
+            if (nota >= 5) {
+                aprobados++;
+            }else {
+                suspendidos++;
+            }
+            nota = Number(prompt("Introduzca aqui la nota del alumno" + " " + (contadorAlumnos + 1) + ":"))
+         }
+            let notaMedia = totalNotas / totalAlumnos
+         console.log("Hay" + " " + aprobados + " " + "alumnos aprobados" + " " + "y" + " " + "Hay" + " " + suspendidos + " " + "alumnos suspensos");
+         console.log("La calificacion media es de :" + " " + notaMedia );
+         
+         
+    </script>
+</body>
+</html>
