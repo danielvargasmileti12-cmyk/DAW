@@ -7,7 +7,23 @@
 </head>
 <body>
     <script>
-        
+        let suma = 0;
+        let media = 0;
+        let temperatura = 0;
+
+        for (let dia = 1; dia <= 7 ; dia++) {
+            temperatura = Number(prompt("Introduce la temperatura del dia " + dia + ":"))
+            
+            while (temperatura < -20 || temperatura > 50) {
+                alert("Temperatura incorrecta. Debe estar entre -20 y 50. ")
+                temperatura = Number(prompt("Introduce la temperatura del dia " + dia + ":"))
+            }
+            suma += temperatura
+        }
+        media = suma / 7
+                
+        alert("La temperatura media de la semana es: " + media)
+           
     </script>
 </body>
 </html>

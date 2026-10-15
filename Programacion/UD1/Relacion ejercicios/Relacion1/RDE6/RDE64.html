@@ -7,7 +7,33 @@
 </head>
 <body>
     <script>
+        const COMBUSTIBLE_INICIAL = Number(prompt("Introduce el combustible inicial:"))
+        const PRECIO_COMBUSTIBLE = Number(prompt("Precio del litro de combustible:"))
+        const CONSUMO_KM = Number(prompt("Consumo cada 100 km:"))
         
+        let kmViaje = 0;
+        let precioViaje = 0;
+        let consumoViaje = 0;
+        let combustibleRestante = COMBUSTIBLE_INICIAL
+        let numeroViajes= 0;
+
+        while (combustibleRestante > 0 ) {
+            
+            kmViaje = Number(prompt("Introduce los kilómetros del viaje " + numeroViajes + ":")) 
+            numeroViajes++;
+            consumoViaje = kmViaje * CONSUMO_KM / 100
+           
+            if (combustibleRestante < 0) {
+                alert("Combustible insuficiente")
+            }else{
+                precioViaje = consumoViaje * PRECIO_COMBUSTIBLE
+                combustibleRestante = COMBUSTIBLE_INICIAL - consumoViaje
+            }
+
+            
+            alert("Precio del viaje: " + precioViaje + "€")
+            alert("Combustible restante: " + combustibleRestante + "€")
+        }
     </script>
 </body>
 </html>
