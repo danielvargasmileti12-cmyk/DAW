@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script>
-        let suma = 0;
-        let media = 0;
-        let temperatura = 0;
 
-        for (let dia = 1; dia <= 7 ; dia++) {
-            temperatura = Number(prompt("Introduce la temperatura del dia " + dia + ":"))
-            
+<body>
+
+    <!--
+    Pide la temperatura de cada uno de los 7 días de la semana y calcula su media. Solo se admiten valores entre \-20 y 50, ambos incluidos. Si el valor es incorrecto, vuelve a pedir la temperatura del mismo día.
+
+**Ejemplo:**
+
+```
+Introduce la temperatura del día 1: 32
+Introduce la temperatura del día 2: 31
+Introduce la temperatura del día 3: 28.5
+Introduce la temperatura del día 4: 82
+Temperatura incorrecta. Debe estar entre -20 y 50.
+Introduce la temperatura del día 4: 12
+Introduce la temperatura del día 5: 33
+Introduce la temperatura del día 6: 35
+Introduce la temperatura del día 7: 65
+Temperatura incorrecta. Debe estar entre -20 y 50.
+Introduce la temperatura del día 7: 30
+La temperatura media de la semana es: 28.79-->
+    <script>
+        let temperatura = 0;
+        let media = 0;
+        let suma = 0;
+
+        for (let dia = 0; dia < 7; dia++) {
+            temperatura = Number(prompt("Introduce la temperatura del dia " + (dia + 1) + ":"))
+
             while (temperatura < -20 || temperatura > 50) {
-                alert("Temperatura incorrecta. Debe estar entre -20 y 50. ")
-                temperatura = Number(prompt("Introduce la temperatura del dia " + dia + ":"))
+                alert("Temperatura incorrecta. Debe estar entre -20 y 50.")
+                temperatura = Number(prompt("Introduce la temperatura del dia " + (dia + 1) + ":"))
             }
             suma += temperatura
         }
         media = suma / 7
-                
+
         alert("La temperatura media de la semana es: " + media)
-           
+
+
     </script>
 </body>
+
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Simula el repostaje de varios coches. Cada coche tiene un tanque de 60 litros y reposta hasta llenarlo. El programa debe preguntar cuántos 
+    litros echa cada vez y detenerse cuando el tanque está lleno.
+
+* Muestra cuántas veces ha repostado y el total gastado (precio/litro: 1.25€)
+
+#### 🧪 Ejemplo:
+
+```
+Repostaje 1: 20
+Repostaje 2: 30
+Repostaje 3: 10
+
+¡Depósito lleno!
+Total de repostajes: 3
+Total gastado: 75€
+```
+
+> 💡 Usa `while` para repetir repostajes y `if` para controlar exceso de litros.-->
+
+    <script>
+        let repostaje = 0;
+        let contadorRepostaje = 0;
+        let repostajeTotal = 0;
+        let dineroTotal = 0;
+        const PRECIOLITRO = 1.25
+        const TANQUELITROS = 60
+
+        while (repostajeTotal < TANQUELITROS) {
+            repostaje = Number(prompt("Repostaje " + (contadorRepostaje + 1) + ": "))
+            
+            if (repostajeTotal >= TANQUELITROS) {
+                repostaje = TANQUELITROS - repostajeTotal
+            }
+            
+            repostajeTotal += repostaje
+            dineroTotal += repostaje * PRECIOLITRO
+
+            contadorRepostaje++;
+        }
+        alert("¡Depósito lleno!")
+        alert("Total de repostajes: " + contadorRepostaje)
+        alert("Total gastado: " + dineroTotal + "€")
+
+    </script>
+</body>
+
+</html>
