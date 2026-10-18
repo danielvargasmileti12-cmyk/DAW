@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    El programa pide el número de coches en carrera. Por cada coche, solicita su nombre y puntos conseguidos (máximo 100). Si los puntos son:
+
+* 80 o más: 🥇 **Oro**
+* Entre 50 y 79: 🥈 **Plata**
+* Menos de 50: 🥉 **Fuera del podio**
+
+> Usa `for` y `if/else if/else` para determinar la categoría.
+
+#### 🧪 Ejemplo:
+
+```
+Coche 1: Rayo - 95 puntos → Oro
+Coche 2: Sally - 78 puntos → Plata
+Coche 3: Guido - 42 puntos → Fuera del podio-->
+
+    <script>
+        let numeroCoches = Number(prompt("Introduzca el numero de Coches"))
+        let nombreCoche = 0;
+        let puntosConseguidos = 0;
+        let resultado = "";
+
+        for (let coche = 0; coche < numeroCoches; coche++) {
+            nombreCoche = prompt("Introduzca el nombre del coche " + (coche + 1))
+            puntosConseguidos = Number(prompt("Introduce la cantidad de puntos del coche " + (coche + 1)))
+
+            if (puntosConseguidos >= 80 && puntosConseguidos <= 100) {
+                resultado += "Coche " + (coche + 1) + ": " + nombreCoche + " - " + puntosConseguidos + " puntos → Oro\n";
+            } else if (puntosConseguidos >= 50 && puntosConseguidos <= 79) {
+                resultado += "Coche " + (coche + 1) + ": " + nombreCoche + " - " + puntosConseguidos + " puntos → plata\n";
+            } else {
+                resultado += "Coche " + (coche + 1) + ": " + nombreCoche + " - " + puntosConseguidos + " puntos → Fuera del podio\n";
+            }
+        }
+        alert(resultado)
+
+
+    </script>
+</body>
+
+</html>
