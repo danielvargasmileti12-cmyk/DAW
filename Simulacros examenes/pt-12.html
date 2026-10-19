@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    Una churrería necesita preparar 5 raciones de churros.
+    Crea un programa que haga lo siguiente:
+    1. Utilice un bucle for para repetir el proceso 5 veces.
+    2. En cada repetición, pregunte cuántos churros lleva esa ración mediante prompt.
+    3. Sume los churros de todas las raciones.
+    4. Al terminar, muestre con alert:
+   - El total de churros preparados.
+   - La media de churros por ración.
+   -->
+    <script>
+        let racionesChurros = 0;
+        let sumaRaciones = 0;
+        let mediaRaciones = 0;
+
+        for (let racion = 0; racion < 5; racion++) {
+            racionesChurros = Number(prompt("Cuantos churros lleva la racion " + (racion + 1)))
+            sumaRaciones += racionesChurros
+        }
+        mediaRaciones = sumaRaciones / 5;
+
+        alert(sumaRaciones)
+        alert(mediaRaciones)
+    </script>
+</body>
+
+</html>

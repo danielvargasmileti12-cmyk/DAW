@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    la churrería de Luigi vende raciones de churros. El programa pide el número de churros que quiere un cliente 
+    y muestra la categoría del pedido:
+- Menos de 5 churros: Ración pequeña.
+- Desde 5 hasta 10 churros, incluidos: Ración mediana.
+- Más de 10 churros: Ración grande.
+Utiliza prompt, Number, if, else if, else y alert.
+Tu objetivo: escribir el programa completo sin utilizar ningún bucle.
+    -->
+    <script>
+        let churrosCliente = Number(prompt("Introduce la cantidad de churros a desear"))
+
+        if (churrosCliente < 0) {
+            alert("Error introduzca otro numero")
+
+        }
+        if (churrosCliente > 0 && churrosCliente < 5) {
+            alert("Racion pequeña")
+        } else if (churrosCliente >= 5 && churrosCliente <= 10) {
+            alert("Racion mediana")
+        } else if (churrosCliente > 10) {
+            alert("Racion grande")
+        }
+
+    </script>
+</body>
+
+</html>

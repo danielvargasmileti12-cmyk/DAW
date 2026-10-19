@@ -33,13 +33,29 @@ Clientes con cambio completo: 2
 -->
 
     <script>
-        let cliente = 0;
-        let contadorCliente = 0;
+        const NUMERONEUMATICOS = 4;
+        const REINICIO = 0;
 
-        while (cliente != 0) {
-            cliente = Number(prompt("Cliente" + (contadorCliente + 1)))
-            contadorCliente++;
+        let contadorClientes = 0;
+        let totalNeumaticos = 0;
+        let neumaticos = 0;
+        let cambioCompleto = 0;
+
+        neumaticos = Number(prompt("Cliente " + (contadorClientes + 1)))
+
+        while (neumaticos != REINICIO) {
+            contadorClientes++;
+            totalNeumaticos += neumaticos;
+
+            if (neumaticos === NUMERONEUMATICOS) {
+                cambioCompleto++;
+            }
+            neumaticos = Number(prompt("Cliente " + (contadorClientes + 1)));
         }
+        alert("Total de clientes: " + contadorClientes);
+        alert("Neumaticos vendidos: " + totalNeumaticos);
+        alert("Clientes con cambio completo: " + cambioCompleto);
+
     </script>
 </body>
 
